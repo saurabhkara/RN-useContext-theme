@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainScreen from "./screeens/MainScreen";
 import Second from "./screeens/Second";
+import ThirdScreen from './screeens/ThirdScreen'
 import { ContextWrapper } from "./context/themeContext";
 
 const Stack = createNativeStackNavigator();
@@ -19,6 +20,7 @@ export default function App() {
             headerShown: false,
           }}
         >
+          <Stack.Screen name="third" component={ThirdScreen} />
           <Stack.Screen name="main" component={MainScreen} />
           <Stack.Screen name="second" component={Second} />
         </Stack.Navigator>
